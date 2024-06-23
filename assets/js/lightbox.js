@@ -2,7 +2,8 @@ import SimpleLightbox from "simplelightbox";
 
 const lightboxSettings = {
   captions: false,
-  disableRightClick: true
+  disableRightClick: true,
+  overlayOpacity: 1
 }
 
 const headerLightbox = () => {
