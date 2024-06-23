@@ -2,9 +2,9 @@
 
 {{#post}}
 
-<article class="{{post_class}}">
+<article id="post" class="{{post_class}}">
 
-    <header class="lightbox w-full h-[100vw] [@media(min-aspect-ratio:1/1)]:h-[80vh]">
+    <header class="w-full h-[100vw] [@media(min-aspect-ratio:1/1)]:h-[80vh]">
       <a href="{{img_url feature_image size="xl"}}" class="w-full h-full">
         <img
           srcset="
@@ -15,9 +15,9 @@
           {{img_url feature_image size="l"}} 1200w,
           {{img_url feature_image size="xl"}} 2000w"
           sizes="(min-width: 2000px) 2000px, 90vw"
-          src="{{img_url feature_image size="xl"}}"
+          src="{{img_url feature_image}}"
           alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-          class="w-full h-full object-contain"
+          class="lightbox-image w-full h-full object-contain"
         >
       </a>
     </header>

@@ -1,6 +1,7 @@
 import SimpleLightbox from "simplelightbox";
 
 const lightboxSettings = {
+  sourceAttr: 'src',
   captions: false,
   disableRightClick: true,
   overlayOpacity: 1,
@@ -8,28 +9,21 @@ const lightboxSettings = {
   heightRatio: 0.95
 }
 
-const headerLightbox = () => {
-  let lightboxContainer = document.querySelector('.lightbox');
-  if (!lightboxContainer) { return; }
-
-  new SimpleLightbox('.lightbox a', lightboxSettings);
-}
-
-const ghostGalleries = () => {
-  const galleries = document.querySelectorAll('.kg-gallery-container');
-  if (!galleries) { return; }
-
-  galleries.forEach(gallery => {
-    new SimpleLightbox(
-      gallery.querySelectorAll('img'), {
-        ...lightboxSettings,
-        sourceAttr: 'src'
-      }
-    );
-  });
-}
+const selectors = [
+  'img.kg-image',
+  '.kg-image img',
+  'img.kg-gallery-image',
+  '.kg-gallery-image img',
+  'img.lightbox-image',
+  '.lightbox-image img'
+];
 
 export default function lightbox() {
-  headerLightbox();
-  ghostGalleries();
+  let lightboxContainer = document.querySelector('#post');
+  if (!lightboxContainer) { return; }
+
+  new SimpleLightbox(
+    lightboxContainer.querySelectorAll(selectors.join(', ')),
+    lightboxSettings
+  );
 }
