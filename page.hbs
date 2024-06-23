@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+
+<article class="{{post_class}}">
+
+    <div class="container mx-auto prose px-4 md:px-0">
+      <div>
+        {{> "feature_image"}}
+        <h1 class="m-0 text-5xl">{{title}}</h1>
+        {{#if custom_excerpt}}
+          <h2 class="m-0">{{custom_excerpt}}</h2>
+        {{/if}}
+      <div>
+      <div>
+        {{content}}
+      </div>
+    </div>
+
+</article>
+
+{{/post}}

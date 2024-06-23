@@ -1,0 +1,19 @@
+<header class="p-4">
+  <nav class="default-flex-row uppercase">
+    <div class="text-xl font-bold flex-1 lg:flex-none">
+      <a href="{{@site.url}}">
+        {{#if @site.logo}}
+          <img src="{{@site.logo}}" alt="{{@site.title}}" />
+        {{else}}
+          <span class="">
+            {{@site.title}}
+          </span>
+        {{/if}}
+      </a>
+    </div>
+
+    {{> "menu/desktop"}}
+
+    {{> "menu/mobile"}}
+  </nav>
+</header>

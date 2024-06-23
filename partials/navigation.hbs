@@ -1,0 +1,8 @@
+<ul class="space-y-4 lg:space-y-0 lg:default-flex-row">
+  {{^if isSecondary}}
+    <li class="flex-1"></li>
+  {{/if}}
+  {{#foreach navigation}}
+    <li class="navigation-item nav-{{slug}}{{#if current}} nav-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+  {{/foreach}}
+</ul>

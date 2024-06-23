@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-base {
+    @apply px-4 py-2 rounded-md text-white bg-ghost-accent;
+  }
+
+  .btn-hover {
+    @apply hover:brightness-105;
+  }
+
+  .btn {
+    @apply btn-base btn-hover;
+  }
+
+  .navigation-item {
+    @apply uppercase text-zinc-950 hover:text-zinc-600;
+
+    &.nav-current {
+      @apply text-zinc-600;
+    }
+  }
+
+  .post-header {
+    height: 100vw;
+  }
+
+  @media (min-aspect-ratio: 1/1) {
+    .post-header {
+        @apply h-screen;
+    }
+  }
+}
+
+@layer utilities {
+  .text-ghost-accent {
+    color: var(--ghost-accent-color);
+  }
+
+  .bg-ghost-accent {
+    background-color: var(--ghost-accent-color);
+  }
+
+  .default-flex-row {
+    @apply flex flex-row items-center space-x-4;
+  }
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.post-hidden {
+  display: none;
+}
+
+.kg-width-wide {
+  /* width: 150%;
+  max-width: 100vw;
+  margin-left: -25%; */
+}
+
+.kg-width-full {
+}

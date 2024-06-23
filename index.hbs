@@ -1,0 +1,16 @@
+{{!< default}}
+
+<div class="gh-postfeed">
+  {{#foreach posts}}
+    {{^has tag=@custom.hidden_tags}}
+      {{> "post" page=../pagination.page }}
+    {{/has}}
+  {{/foreach}}
+</div>
+
+{{!-- If JS isn't enabled, fallback to standard pagination --}}
+<noscript>
+  <div>
+    {{pagination}}
+  </div>
+</noscript>

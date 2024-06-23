@@ -1,0 +1,18 @@
+<div class="flex-1 default-flex-row !hidden lg:!flex">
+
+  <div class="flex-1">
+    {{navigation}}
+  </div>
+
+  <div class="default-flex-row">
+    {{search}}
+    {{#if @site.members_enabled}}
+      {{^if @member}}
+        <a href="{{@site.signup_url}}" class="btn">Subscribe</a>
+      {{else}}
+        <a href="#/portal/account" class="btn">Account</a>
+      {{/if}}
+    {{/if}}
+  </div>
+
+</div>
