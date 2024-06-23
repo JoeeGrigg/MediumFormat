@@ -19,7 +19,7 @@
     @apply uppercase text-zinc-950 hover:text-zinc-600;
 
     &.nav-current {
-      @apply text-zinc-600;
+      @apply text-zinc-600 underline underline-offset-4 decoration-2;
     }
   }
 }
