@@ -29,7 +29,7 @@
 
   @media (min-aspect-ratio: 1/1) {
     .post-header {
-        @apply h-screen;
+        height: 80vh;
     }
   }
 }
