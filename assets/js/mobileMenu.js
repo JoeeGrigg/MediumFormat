@@ -21,6 +21,13 @@ export default function mobileMenu() {
     close();
   });
 
+  mobileMenu.addEventListener('click', () => {
+    close();
+  });
+
+  mobileMenu.querySelector('#mobile-menu-main').addEventListener('click', (e) => {
+    e.stopPropagation();
+  })
 
   window.addEventListener('resize', function() {
     close();
