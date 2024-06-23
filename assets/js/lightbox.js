@@ -1,16 +1,32 @@
 import SimpleLightbox from "simplelightbox";
 
-let lightboxContainer = document.querySelector('.lightbox');
+const lightboxSettings = {
+  captions: false,
+  disableRightClick: true
+}
 
-export default function macyFeed() {
+const headerLightbox = () => {
+  let lightboxContainer = document.querySelector('.lightbox');
+  if (!lightboxContainer) { return; }
 
-    if (!lightboxContainer) { return; }
+  new SimpleLightbox('.lightbox a', lightboxSettings);
+}
 
-    console.log(lightboxContainer)
+const ghostGalleries = () => {
+  const galleries = document.querySelectorAll('.kg-gallery-container');
+  if (!galleries) { return; }
 
-    let lightbox = new SimpleLightbox(
-      '.lightbox a',
-      {}
+  galleries.forEach(gallery => {
+    new SimpleLightbox(
+      gallery.querySelectorAll('img'), {
+        ...lightboxSettings,
+        sourceAttr: 'src'
+      }
     );
+  });
+}
 
+export default function lightbox() {
+  headerLightbox();
+  ghostGalleries();
 }
