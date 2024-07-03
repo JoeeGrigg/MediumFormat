@@ -86,3 +86,7 @@ body {
 .kg-bookmark-thumbnail > img {
   margin: 0;
 }
+
+.kg-embed-card {
+  @apply aspect-w-16 aspect-h-9;
+}

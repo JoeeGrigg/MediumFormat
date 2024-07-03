@@ -38,8 +38,8 @@
     "photography"
   ],
   "repository": {
-      "type": "git",
-      "url": "https://github.com/JoeeGrigg/MediumFormat.git"
+    "type": "git",
+    "url": "https://github.com/JoeeGrigg/MediumFormat.git"
   },
   "bugs": "https://github.com/JoeeGrigg/MediumFormat/issues",
   "contributors": "https://github.com/JoeeGrigg/MediumFormat/graphs/contributors",
@@ -50,6 +50,7 @@
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-terser": "^0.4.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.13",
     "bestzip": "^2.2.1",
     "concurrently": "^8.2.2",
