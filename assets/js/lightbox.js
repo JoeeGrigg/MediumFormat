@@ -6,7 +6,10 @@ const lightboxSettings = {
   disableRightClick: true,
   overlayOpacity: 1,
   widthRatio: 0.95,
-  heightRatio: 0.95
+  heightRatio: 0.95,
+  animationSpeed: 100,
+  animationSlide: false,
+  fadeSpeed: 200
 }
 
 const selectors = [
