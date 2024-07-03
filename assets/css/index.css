@@ -59,32 +59,29 @@ body {
 /* Post */
 
 .post-content > * {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  @apply col-start-3 col-end-4;
 }
 
 /* Ghost Overrides */
 
 .kg-width-wide {
-  grid-column-start: 2;
-  grid-column-end: 5;
+  @apply col-start-2 col-end-5;
 }
 
 .kg-width-full {
-  grid-column-start: 1;
-  grid-column-end: 6;
+  @apply col-start-1 col-end-6;
 }
 
 .kg-gallery-image {
-  cursor: pointer;
+  @apply cursor-pointer;
 }
 
 .kg-bookmark-icon {
-  margin: 0;
+  @apply m-0;
 }
 
 .kg-bookmark-thumbnail > img {
-  margin: 0;
+  @apply m-0;
 }
 
 .kg-embed-card {
